@@ -9,9 +9,10 @@ pipeline {
             steps {   
                 script {             
    
-                    logFourJLogger.logInfo("Compile Stage Starting")
+                    logInfo("Compile Stage Starting")
+                    //logFourJLogger.logInfo("Compile Stage Starting")
                     sh 'mvn clean compile'
-                    logFourJLogger.logInfo("Compile Stage Completed")
+                    //logFourJLogger.logInfo("Compile Stage Completed")
                 
                 }
             }
@@ -21,9 +22,9 @@ pipeline {
             steps { 
                 script {               
 
-                    logFourJLogger.logInfo("Test Stage Starting")
+                    //logFourJLogger.logInfo("Test Stage Starting")
                     sh 'mvn test'
-                    logFourJLogger.logInfo("Test Stage Completed")
+                    //logFourJLogger.logInfo("Test Stage Completed")
               
                 }
             }
