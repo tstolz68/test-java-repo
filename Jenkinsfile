@@ -4,8 +4,18 @@ pipeline {
 
     stages {
         stage ('Compile Stage') {
-            steps {                               
-                    sh 'javac HelloWorld.java'
+            steps {                
+                withMaven(maven: 'maven_3_6_0') {
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+
+        stage ('Testing Stage') {
+            steps {                
+                withMaven(maven: 'maven_3_6_0') {
+                    sh 'mvn test'
+                }
             }
         }
 

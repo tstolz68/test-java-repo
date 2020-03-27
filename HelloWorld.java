@@ -1,7 +1,15 @@
+
 class HelloWorld 
 { 
+    public void methon1(String outString) {
+    	System.out.println(outString); 
+    }
+    
     public static void main(String args[]) 
     { 
-        System.out.println("Hello, World"); 
+        HelloWorld hw = new HelloWorld();
+        hw.methon1("Hello, World");
     } 
-} 
+}
+
+
