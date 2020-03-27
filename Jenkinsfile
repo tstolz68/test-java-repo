@@ -7,25 +7,25 @@ pipeline {
     stages {
         stage ('Compile Stage') {
             steps {   
-                script {             
+                //script {             
    
-                    logFourJLogger.logInfo("Compile Stage Starting")
-                    sh 'mvn clean compile'
-                    logFourJLogger.logInfo("Compile Stage Completed")
+                logFourJLogger.logInfo("Compile Stage Starting")
+                sh 'mvn clean compile'
+                logFourJLogger.logInfo("Compile Stage Completed")
                 
-                }
+                //}
             }
         }
 
         stage ('Testing Stage') {
             steps { 
-                script {               
+                //script {               
 
-                    logFourJLogger.logInfo("Test Stage Starting")
-                    sh 'mvn test'
-                    logFourJLogger.logInfo("Test Stage Completed")
+                logFourJLogger.logInfo("Test Stage Starting")
+                sh 'mvn test'
+                logFourJLogger.logInfo("Test Stage Completed")
               
-                }
+                //}
             }
         }
 
