@@ -8,11 +8,11 @@ pipeline {
         stage ('Compile Stage') {
             steps {   
                 script {             
-                    withMaven(maven: 'maven_3_6_0') {
-                        log4Logger.logInfo("Compile Stage Starting")
-                        sh 'mvn clean compile'
-                        log4Logger.logInfo("Compile Stage Completed")
-                    }
+   
+                    log4Logger.logInfo("Compile Stage Starting")
+                    sh 'mvn clean compile'
+                    log4Logger.logInfo("Compile Stage Completed")
+                
                 }
             }
         }
@@ -20,11 +20,11 @@ pipeline {
         stage ('Testing Stage') {
             steps { 
                 script {               
-                    withMaven(maven: 'maven_3_6_0') {
-                        log4Logger.logInfo("Test Stage Starting")
-                        sh 'mvn test'
-                        log4Logger.logInfo("Test Stage Completed")
-                    }
+
+                    log4Logger.logInfo("Test Stage Starting")
+                    sh 'mvn test'
+                    log4Logger.logInfo("Test Stage Completed")
+              
                 }
             }
         }
