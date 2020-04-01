@@ -5,15 +5,13 @@ pipeline {
     agent any
 
     parameters {
-	parameters {
-  		extendedChoice defaultValue: 'INFO', 
-		description: 'Select the log levels to display in Console Log. INFO is default',
-		multiSelectDelimiter: ',', name: 'env_loglevel', quoteValue: false, 
-		saveJSONParameterToFile: false, 
-		type: 'PT_MULTI_SELECT', 
-		value: 'INFO,DEBUG,WARN,ERROR', 
-		visibleItemCount: 4
-	}
+	extendedChoice (defaultValue: 'INFO', 
+	description: 'Select the log levels to display in Console Log. INFO is default',
+	multiSelectDelimiter: ',', name: 'env_loglevel', quoteValue: false, 
+	saveJSONParameterToFile: false, 
+	type: 'PT_MULTI_SELECT', 
+	value: 'INFO,DEBUG,WARN,ERROR', 
+	visibleItemCount: 4)
     }
 
     stages {
