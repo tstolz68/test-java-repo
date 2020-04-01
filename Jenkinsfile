@@ -6,7 +6,7 @@ pipeline {
 
     parameters {
 	choice(
-	    defaultvalue: INFO
+	    defaultvalue: 'INFO',
             choices: '\nINFO\nDEBUG\nWARN\nERROR',
             description: 'Choose log levels to display in Console Log output. INFO is default. ',
             name: 'env_loglevels')
