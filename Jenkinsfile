@@ -4,6 +4,14 @@ pipeline {
 
     agent any
 
+    parameters {
+	choice(
+	    defaultvalue: INFO
+            choices: '\nINFO\nDEBUG\nWARN\nERROR',
+            description: 'Choose log levels to display in Console Log output. INFO is default. ',
+            name: 'env_loglevels')
+    }
+
     stages {
         stage ('Compile Stage') {
             steps {
