@@ -20,7 +20,7 @@ pipeline {
         stage ('Compile Stage') {
             steps {
                 script {
-                    callLog()
+                    callLog.testOne()
                     sh 'mvn clean compile'
                 }
             }
