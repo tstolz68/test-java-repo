@@ -1,5 +1,5 @@
 #!groovy
-@Library(['callLog@develop', 'Log4JLogger@develop']) _
+@Library('callLog@develop') _
 pipeline {
 
     agent any
