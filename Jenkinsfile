@@ -1,5 +1,5 @@
 #!groovy
-@Library('testJenkinsSharedevelop') _
+@Library('testJenkinsShare@develop') _
 pipeline {
 
     agent any
