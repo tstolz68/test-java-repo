@@ -1,5 +1,5 @@
 #!groovy
-@Library('callLog@develop') _
+@Library('testJenkinsSharedevelop') _
 pipeline {
 
     agent any
