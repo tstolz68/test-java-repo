@@ -22,8 +22,9 @@ pipeline {
             steps {
                 script {
                     //callLog.testOne()
-                    Foo()
-                    sh 'mvn clean compile'
+                    
+                    Foo.call()
+                    sh 'javac HelloWorld.java'
                 }
             }
         }
@@ -31,7 +32,7 @@ pipeline {
         stage ('Testing Stage') {
             steps {
                 script {
-                    sh 'mvn test'
+                    
                 }
             }
         }
