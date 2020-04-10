@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     //callLog.testOne()
-                    
+
                     Foo.call()
                     sh 'javac HelloWorld.java'
                 }
@@ -32,7 +32,7 @@ pipeline {
         stage ('Testing Stage') {
             steps {
                 script {
-                    
+                    println "THIS IS A TEST"
                 }
             }
         }
