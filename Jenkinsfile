@@ -21,9 +21,7 @@ pipeline {
         stage ('Compile Stage') {
             steps {
                 script {
-                    //callLog.testOne()
-
-                    Foo.test()
+                    callLog.testOne()
                     sh 'javac HelloWorld.java'
                 }
             }
