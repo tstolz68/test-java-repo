@@ -23,7 +23,7 @@ pipeline {
                 script {
                     //callLog.testOne()
 
-                    Foo.call()
+                    Foo.test()
                     sh 'javac HelloWorld.java'
                 }
             }
