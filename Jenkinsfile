@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     //callLog.testOne()
-                    Foo.test()
+                    Foo()
                     sh 'mvn clean compile'
                 }
             }
