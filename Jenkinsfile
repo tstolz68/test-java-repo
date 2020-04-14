@@ -11,7 +11,7 @@ pipeline {
             name: 'env_loglevel', 
             quoteValue: false, 
             saveJSONParameterToFile: false, 
-            type: 'PT_CHECKBOX', 
+            //type: 'PT_CHECKBOX', 
             value: 'INFO, DEBUG, WARN, ERROR', 
             visibleItemCount: 4
         )
